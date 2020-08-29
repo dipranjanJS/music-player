@@ -57,7 +57,14 @@ function playSong() {
     isPlaying = true;
     playBtn.classList.replace('fa-play', 'fa-pause');
     playBtn.setAttribute('title', 'Pause');
-    music.play()
+    let playPromis = music.play();
+    if(playPromis !== undefined) {
+        playPromis.then(function() {
+
+        }).catch(function(error) {
+            
+        })
+    }
 }
 
 // Pause
@@ -89,7 +96,7 @@ function prevSong() {
         songIndex = songs.length - 1;
     }
     loadSong(songs[songIndex]);
-    playSong()
+    playSong();
 }
 
 // Next Song
@@ -99,7 +106,7 @@ function nextSong() {
         songIndex = 0;
     }
     loadSong(songs[songIndex]);
-    playSong()
+    playSong();
 }
 
 // Update Progressbar and time
