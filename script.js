@@ -57,7 +57,14 @@ function playSong() {
     isPlaying = true;
     playBtn.classList.replace('fa-play', 'fa-pause');
     playBtn.setAttribute('title', 'Pause');
-    music.play();
+    let playPromise = music.play()
+    if(playPromise !== undefined) {
+        playPromise.then(_ => {
+            music.play()
+        }).catch(error => {
+            //Catch error here
+        })
+    }
 }
 
 // Pause
@@ -69,7 +76,7 @@ function pauseSong() {
 }
 
 // Play or Pause eventListener
-playBtn.addEventListener('click', () => isPlaying ? pauseSong() : playSong());
+playBtn.addEventListener('click', () => (isPlaying ? pauseSong() : playSong()));
 
 // Update the DOM
 function loadSong(song) {
@@ -77,6 +84,10 @@ function loadSong(song) {
     artist.textContent = song.artist;
     music.src = `music/${song.name}.mp3`;
     image.src = `img/${song.name}.jpg`;
+    console.log(title);
+    console.log(artist);
+    console.log(music);
+    console.log(image);
 }
 
 // Current Song
@@ -101,9 +112,6 @@ function nextSong() {
     loadSong(songs[songIndex]);
     playSong()
 }
-
-// On load Select first song
-loadSong(songs[songIndex]);
 
 // Update Progressbar and time
 function updateProgressBar(e) {
@@ -145,3 +153,6 @@ nextBtn.addEventListener('click', nextSong);
 music.addEventListener('ended', nextSong);
 music.addEventListener('timeupdate', updateProgressBar);
 progressContainer.addEventListener('click', setProgressBar);
+
+// On load Select first song
+loadSong(songs[songIndex]);
