@@ -58,13 +58,6 @@ function playSong() {
     playBtn.classList.replace('fa-play', 'fa-pause');
     playBtn.setAttribute('title', 'Pause');
     music.play()
-    // if(playPromise !== undefined) {
-    //     playPromise.then(_ => {
-    //         music.play()
-    //     }).catch(error => {
-    //         //Catch error here
-    //     })
-    // }
 }
 
 // Pause
@@ -84,10 +77,6 @@ function loadSong(song) {
     artist.textContent = song.artist;
     music.src = `music/${song.name}.mp3`;
     image.src = `img/${song.name}.jpg`;
-    console.log(title);
-    console.log(artist);
-    console.log(music);
-    console.log(image);
 }
 
 // Current Song
