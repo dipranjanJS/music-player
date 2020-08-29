@@ -12,22 +12,41 @@ const playBtn = document.getElementById('play');
 
 // Music
 const songs = [
+    // {
+    //     name: 'Right-now',
+    //     displayName: 'Right now',
+    //     artist: 'Akon'
+    // },
+    // {
+    //     name: "Don't-Give-Up-On-Me",
+    //     displayName: "Don't Give Up On Me",
+    //     artist: 'Andy Grammer'
+    // },
     {
-        name: 'jacinto-1',
-        displayName: 'Right now',
-        artist: 'Akon'
-    },
-    {
-        name: "jacinto-2",
-        displayName: "Don't Give Up On Me",
-        artist: 'Andy Grammer'
-    },
-    {
-        name: 'jacinto-3',
+        name: 'Run-Away-with-Me',
         displayName: 'Run Away with Me CARLY',
         artist: 'RAE JEPSEN'
     },
-    
+    {
+        name: 'Turn-Up-the-Radio',
+        displayName: 'Turn Up the Radio',
+        artist: 'Autograph'
+    },
+    {
+        name: 'Hey-Soul-Sister',
+        displayName: 'Hey Soul Sister',
+        artist: 'Train'
+    },
+    {
+        name: 'Gone-Gone-Gone',
+        displayName: 'Gone, Gone, Gone',
+        artist: 'Phillip Phillips'
+    },
+    // {
+    //     name: 'Light-years',
+    //     displayName: 'Light years',
+    //     artist: 'The Midnight'
+    // }
 ]
 
 // Check if playing
