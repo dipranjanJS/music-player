@@ -12,16 +12,6 @@ const playBtn = document.getElementById('play');
 
 // Music
 const songs = [
-    // {
-    //     name: 'Right-now',
-    //     displayName: 'Right now',
-    //     artist: 'Akon'
-    // },
-    // {
-    //     name: "Don't-Give-Up-On-Me",
-    //     displayName: "Don't Give Up On Me",
-    //     artist: 'Andy Grammer'
-    // },
     {
         name: 'Run-Away-with-Me',
         displayName: 'Run Away with Me CARLY',
@@ -42,11 +32,21 @@ const songs = [
         displayName: 'Gone, Gone, Gone',
         artist: 'Phillip Phillips'
     },
-    // {
-    //     name: 'Light-years',
-    //     displayName: 'Light years',
-    //     artist: 'The Midnight'
-    // }
+    {
+        name: 'Right-Now',
+        displayName: 'Right now',
+        artist: 'Akon'
+    },
+    {
+        name: "Don't-Give-up-on-me",
+        displayName: "Don't Give Up On Me",
+        artist: 'Andy Grammer'
+    },
+    {
+        name: 'Light-Years',
+        displayName: 'Light years',
+        artist: 'The Midnight'
+    }
 ]
 
 // Check if playing
