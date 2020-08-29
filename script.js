@@ -13,37 +13,37 @@ const playBtn = document.getElementById('play');
 // Music
 const songs = [
     {
-        name: 'Right now',
+        name: 'Right-now',
         displayName: 'Right now',
         artist: 'Akon'
     },
     {
-        name: "Don't Give Up On Me",
+        name: "Don't-Give-Up-On-Me",
         displayName: "Don't Give Up On Me",
         artist: 'Andy Grammer'
     },
     {
-        name: 'Run Away with Me',
+        name: 'Run-Away-with-Me',
         displayName: 'Run Away with Me CARLY',
         artist: 'RAE JEPSEN'
     },
     {
-        name: 'Turn Up the Radio',
+        name: 'Turn-Up-the-Radio',
         displayName: 'Turn Up the Radio',
         artist: 'Autograph'
     },
     {
-        name: 'Hey Soul Sister',
+        name: 'Hey-Soul-Sister',
         displayName: 'Hey Soul Sister',
         artist: 'Train'
     },
     {
-        name: 'Gone Gone Gone',
+        name: 'Gone-Gone-Gone',
         displayName: 'Gone, Gone, Gone',
         artist: 'Phillip Phillips'
     },
     {
-        name: 'Light years',
+        name: 'Light-years',
         displayName: 'Light years',
         artist: 'The Midnight'
     }
@@ -57,14 +57,14 @@ function playSong() {
     isPlaying = true;
     playBtn.classList.replace('fa-play', 'fa-pause');
     playBtn.setAttribute('title', 'Pause');
-    let playPromise = music.play()
-    if(playPromise !== undefined) {
-        playPromise.then(_ => {
-            music.play()
-        }).catch(error => {
-            //Catch error here
-        })
-    }
+    music.play()
+    // if(playPromise !== undefined) {
+    //     playPromise.then(_ => {
+    //         music.play()
+    //     }).catch(error => {
+    //         //Catch error here
+    //     })
+    // }
 }
 
 // Pause
