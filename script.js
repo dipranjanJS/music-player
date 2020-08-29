@@ -13,40 +13,21 @@ const playBtn = document.getElementById('play');
 // Music
 const songs = [
     {
-        name: 'Right-now',
+        name: 'jacinto-1',
         displayName: 'Right now',
         artist: 'Akon'
     },
     {
-        name: "Don't-Give-Up-On-Me",
+        name: "jacinto-2",
         displayName: "Don't Give Up On Me",
         artist: 'Andy Grammer'
     },
     {
-        name: 'Run-Away-with-Me',
+        name: 'jacinto-3',
         displayName: 'Run Away with Me CARLY',
         artist: 'RAE JEPSEN'
     },
-    {
-        name: 'Turn-Up-the-Radio',
-        displayName: 'Turn Up the Radio',
-        artist: 'Autograph'
-    },
-    {
-        name: 'Hey-Soul-Sister',
-        displayName: 'Hey Soul Sister',
-        artist: 'Train'
-    },
-    {
-        name: 'Gone-Gone-Gone',
-        displayName: 'Gone, Gone, Gone',
-        artist: 'Phillip Phillips'
-    },
-    {
-        name: 'Light-years',
-        displayName: 'Light years',
-        artist: 'The Midnight'
-    }
+    
 ]
 
 // Check if playing
@@ -57,14 +38,7 @@ function playSong() {
     isPlaying = true;
     playBtn.classList.replace('fa-play', 'fa-pause');
     playBtn.setAttribute('title', 'Pause');
-    let playPromis = music.play();
-    if(playPromis !== undefined) {
-        playPromis.then(function() {
-
-        }).catch(function(error) {
-            
-        })
-    }
+    music.play();
 }
 
 // Pause
