@@ -38,7 +38,7 @@ const songs = [
         artist: 'Akon'
     },
     {
-        name: "Don't-Give-up-on-me",
+        name: "Don't-give-up-on-me",
         displayName: "Don't Give Up On Me",
         artist: 'Andy Grammer'
     },
